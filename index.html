@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/477f9c3019.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .font-primary {
+        font-family: "Work Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class=".font-primary">
+    <header class="mt-5">
+      <h1 class="text-center text-3xl">AI Universe Hub</h1>
+    </header>
+    <main class="container mx-auto mt-2">
+      <div class="text-center">
+        <button class="btn btn-error mt-8 mb-12 text-yellow-50">
+          Sort By Date
+        </button>
+      </div>
+      <section>
+        <div
+          id="card-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"></div>
+        <div class="mt-10 hidden text-center" id="see-more">
+          <button
+            onclick=" handleShowMore()"
+            class="btn btn-error mt-8 text-yellow-50 mb-12"
+          >
+            See More
+          </button>
+        </div>
+        <!-- You can open the modal using ID.showModal() method -->
+        
+        <dialog id="my_modal" class="modal">
+          <div id="modal-container" class="modal-box ">
+            <form method="dialog">
+              <button
+                class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </button>
+            </form>
+            <h3 class="font-bold text-lg">Hello!</h3>
+            <p class="py-4">Press ESC key or click on ✕ button to close</p>
+          </div>
+        </dialog>
+      </section>
+    </main>
+
+    <script src="js/ai.js"></script>
+  </body>
+</html>
